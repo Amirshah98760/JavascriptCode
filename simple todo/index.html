@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Example</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="text" placeholder="Enter your name">
+    <button>Click</button>
+    <p></p>
+  </div>
+
+  <script>
+    let btn = document.querySelector("button");
+    btn.addEventListener('click', () => {
+      let input = document.querySelector("input");
+      let para = document.querySelector("p");
+
+      if (input.value !== "") {
+        para.innerHTML = input.value;
+      } else {
+        para.innerHTML = ""; // Clear old text
+        alert("Please enter some text");
+      }
+    });
+  </script>
+</body>
+</html>
